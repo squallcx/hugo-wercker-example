@@ -8,13 +8,13 @@ build:
 
 deploy:
   steps:
+  - install-packages:
+      packages: git ssh-client
   - script:
     name: Prepare gitconfig
     code: |
         git config --global user.email "rcmdnk@gmail.com"
         git config --global user.name "rcmdnk-wercker"
-  - install-packages:
-      packages: git ssh-client
   - faph/git-push:
       repo: ssh://git@github.com:squallcx/squallcx.github.io.git
       branch: master
