@@ -8,9 +8,9 @@ build:
 deploy:
   steps:
     - lukevivier/gh-pages:
-        token: cde45d1f01d28e4e3a684c1d00780b227508352e
+        token: $GIT_TOKEN
         domain: squallcx.github.io
-        basedir: build
+        basedir: public
 
 
 
