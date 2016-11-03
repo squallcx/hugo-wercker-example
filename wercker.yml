@@ -4,8 +4,13 @@ build:
     - arjen/hugo-build@1.6.1:
         version: "0.14"
         theme: huge-creative-theme
+
 deploy:
   steps:
-    - lukevivier/gh-pages@0.2.1:
-        token: $GIT_TOKEN
+    - install-packages:
+        packages: git ssh-client
+    - leipert/git-push:
+        gh_oauth: $GIT_TOKEN
+        repo: squallcx/squallcx.github.io
+        branch: master
         basedir: public
