@@ -6,11 +6,9 @@ build:
         theme: herring-cove
         flags: --buildDrafts=true
 deploy:
-    steps:
-        - install-packages:
-            packages: git ssh-client
-        - leipert/git-push:
-            gh_oauth: $GIT_TOKEN
-            repo: squallcx/squallcx.github.io
-            branch: master
-            basedir: public
+  steps:
+    - git-push:
+         gh_oauth: $GH_TOKEN
+         gh_pages: true
+         gh_pages_domain: example.org
+         basedir: public
