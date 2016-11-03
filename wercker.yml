@@ -11,5 +11,5 @@ deploy:
        - leipert/git-push:
           gh_oauth: $GIT_TOKEN
           repo: squallcx/githubpage
-          branch: html
+          branch: master
           basedir: .
