@@ -5,3 +5,12 @@ build:
         version: "0.14"
         theme: herring-cove
         flags: --buildDrafts=true
+deploy:
+  steps:
+    - install-packages:
+        packages: git ssh-client
+    - lukevivier/gh-pages@0.2.1:
+        token: 357191cb131336a1ddd0c20a605da4aef6339c6d
+        domain: hugo-wercker.ig.nore.me
+        basedir: public
+
