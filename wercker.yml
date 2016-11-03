@@ -5,11 +5,12 @@ build:
         version: "0.14"
         theme: huge-creative-theme
 deploy:
-    steps:
-       - install-packages:
-         packages: git ssh-client
-       - leipert/git-push:
-          gh_oauth: $GIT_TOKEN
-          repo: squallcx/githubpage
-          branch: master
-          basedir: .
+  box: samueldebruyn/debian-git
+  steps:
+    - ysqi/git-push:
+        gh_oauth: $GIT_TOKEN
+        basedir: public
+        clean_removed_files: true
+        branch: master
+        repo: squallcx/squallcx.github.io
+        gh_pages_domain: squallcx.github.io
