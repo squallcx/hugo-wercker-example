@@ -10,7 +10,7 @@ deploy:
     - install-packages:
         packages: git ssh-client
     - lukevivier/gh-pages@0.2.1:
-        token: 357191cb131336a1ddd0c20a605da4aef6339c6d
+        token: $GIT_TOKEN
         domain: squallcx.github.io
         basedir: public
 
