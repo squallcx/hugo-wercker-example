@@ -8,6 +8,7 @@ build:
 deploy:
   steps:
     - lukevivier/gh-pages:
+        repo:githubpage
         token: $GIT_TOKEN
         basedir: public
 
