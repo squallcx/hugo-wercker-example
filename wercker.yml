@@ -8,6 +8,8 @@ build:
 
 deploy:
   steps:
+  - install-packages:
+      packages: git ssh-client
   - faph/git-push:
       repo: ssh://git@github.com:squallcx/squallcx.github.io.git
       branch: master
