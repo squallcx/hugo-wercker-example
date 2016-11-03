@@ -1,4 +1,4 @@
-box: debian
+box: wercker/default
 build:
   steps:
     - arjen/hugo-build@1.6.1:
@@ -6,12 +6,6 @@ build:
         theme: huge-creative-theme
 deploy:
   steps:
-    - install-packages:
-        packages: git ssh-client
     - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
-        domain: squallcx.github.io
         basedir: public
-        clean_removed_files: true
-        branch: master
-        repo: squallcx/squallcx.github.io
