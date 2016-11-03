@@ -5,7 +5,6 @@ build:
         version: "0.14"
         theme: huge-creative-theme
 deploy:
-  box: samueldebruyn/debian-git
   steps:
     - ysqi/git-push:
         gh_oauth: $GIT_TOKEN
