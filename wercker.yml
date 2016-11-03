@@ -8,6 +8,11 @@ build:
 
 deploy:
   steps:
+  - script:
+    name: Prepare gitconfig
+    code: |
+        git config --global user.email "rcmdnk@gmail.com"
+        git config --global user.name "rcmdnk-wercker"
   - install-packages:
       packages: git ssh-client
   - faph/git-push:
