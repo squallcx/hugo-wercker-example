@@ -6,6 +6,8 @@ build:
         theme: huge-creative-theme
 deploy:
   steps:
+    - install-packages:
+        packages: git ssh-client
     - ysqi/git-push:
         gh_oauth: $GIT_TOKEN
         basedir: public
