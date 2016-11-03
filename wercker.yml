@@ -1,18 +1,12 @@
-box: debian
+box: wercker/default
 build:
   steps:
-    - arjen/hugo-build:
+    - arjen/hugo-build@1.6.1:
         version: "0.14"
-        theme: herring-cove
-        flags: --buildDrafts=true
-deploy:
-  steps:
-    - install-packages:
-        packages: git ssh-client
-    - lukevivier/gh-pages:
-        repo:githubpage
+        theme: huge-creative-theme
+deploy:    
+  steps:        
+    - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
+        domain: www.golifeandsoul.com
         basedir: public
-
-
-
