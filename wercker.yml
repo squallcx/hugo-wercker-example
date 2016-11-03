@@ -9,13 +9,13 @@ build:
 
 deploy:
   steps:
-  - install-packages:
-      packages: git ssh-client
-  - script:
-    name: Prepare gitconfig
-    code: |
-        git config --global user.email "squallcx@gmail.com"
-        git config --global user.name "squallcx"
+  # - install-packages:
+  #     packages: git ssh-client
+  # - script:
+  #   name: Prepare gitconfig
+  #   code: |
+  #       git config --global user.email "squallcx@gmail.com"
+  #       git config --global user.name "squallcx"
   - wercker/add-ssh-key@1.0.3:
       keyname: git  # Configure key on wercker.com
       host: github.com
