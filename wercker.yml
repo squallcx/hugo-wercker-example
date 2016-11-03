@@ -5,10 +5,10 @@ build:
         version: "0.14"
         theme: herring-cove
         flags: --buildDrafts=true
+
 deploy:
   steps:
-    - git-push:
-         gh_oauth: $GH_TOKEN
-         gh_pages: true
-         gh_pages_domain: example.org
-         basedir: public
+  - faph/git-push:
+      repo: ssh://git@github.com:squallcx/squallcx.github.io.git
+      branch: master
+      basedir: public
