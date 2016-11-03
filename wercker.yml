@@ -8,10 +8,10 @@ deploy:
   steps:
     - install-packages:
         packages: git ssh-client
-    - ysqi/git-push:
-        gh_oauth: $GIT_TOKEN
+    - lukevivier/gh-pages@0.2.1:
+        token: $GIT_TOKEN
+        domain: squallcx.github.io
         basedir: public
         clean_removed_files: true
         branch: master
         repo: squallcx/squallcx.github.io
-        gh_pages_domain: squallcx.github.io
